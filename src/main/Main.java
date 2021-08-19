@@ -4,23 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String studiName = "kristi";
-        String studiNachname = "balla";
-        int studiMitarbeiterNummer = 1111111;
-        boolean kristiCanHackYou = false;
+        Mitarbeiter kristi = new Mitarbeiter("kristi", "balla", 1111111, false);
 
-        String dozentName = "felix";
-        String dozentNachname = "boes";
-        int dozentMitarbeiterNummer = 42;
-        boolean felixCanHackYou = true;
+        //strg+D für duplicate
+        Mitarbeiter felix = new Mitarbeiter("felix", "boes", 42, true);
 
-        String[][] namen = {{studiName, studiNachname}, {dozentName, dozentNachname}};
+        Mitarbeiter[] mitarbeiter = {kristi, felix};
 
         for (int i = 0; i < 2; i++) {
 
             System.out.println("Durchlauf: " + (i + 1));
-            System.out.println("name = " + namen[i][0]
-                    + "\nnachname = " + namen[i][1] + "\n\n");
+            System.out.println("name = " + mitarbeiter[i].name
+                    + "\nnachname = " + mitarbeiter[i].nachname + "\n\n");
         }
     }
 }
