@@ -2,9 +2,6 @@ package main;
 
 public class Main {
 
-    //TODO während live demo
-    // refactor code s.d. Mitarbeiter von Person erbt und einiges im Konstruktor vorher gesetzt wird
-
     public static void main(String[] args) {
 
         Mitarbeiter kristi = new Mitarbeiter("kristi", "balla", 1111111, false);
