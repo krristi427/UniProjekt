@@ -4,12 +4,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Mitarbeiter kristi = new Mitarbeiter("kristi", "balla", 1111111, false);
+        Student kristi = null;
+        try {
+            kristi = new Student("kristi", "balla", 1234567, "Info & Cyber");
+        } catch (UngültigesMatrikelnummerException e) {
+            e.printStackTrace();
+            System.out.println("dieser Studierende hat ein ungültiges Matrikelnummer");
+        }
 
         //strg+D für duplicate
-        Mitarbeiter felix = new Mitarbeiter("felix", "boes", 42, true);
+        Dozent felix = new Dozent("felix", "boes", new Modul(13, "AlPro"));
 
-        Mitarbeiter[] mitarbeiter = {kristi, felix};
+        //jeder ist ein person
+        Person[] mitarbeiter = {kristi, felix};
 
         for (int i = 0; i < 2; i++) {
 
